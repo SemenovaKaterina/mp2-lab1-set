@@ -148,14 +148,14 @@ TEST(TSet, throws_when_insert_non_existing_element_out_of_range_using_plus_opera
 
 TEST(TSet, can_insert_existing_element_using_plus_operator)
 {
-  const int size = 4;
-  const int k = 3;
+  const int size = 40;
+  const int k = 30;
   TSet set(size), updatedSet(size);
   set.InsElem(0);
   set.InsElem(k);
   updatedSet = set + k;
 
-  EXPECT_NE(0, set.IsMember(k));
+  EXPECT_NE(30, set.IsMember(k));
 }
 
 TEST(TSet, check_size_of_the_combination_of_two_sets_of_equal_size)
